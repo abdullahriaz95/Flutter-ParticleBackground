@@ -1,3 +1,3 @@
 ## [0.0.1] - TODO: Add release date.
 
-* TODO: Describe initial release.
+* A customisable particle background making your app more pleasant
