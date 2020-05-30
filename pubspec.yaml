@@ -1,6 +1,6 @@
 name: flutter_particle_background
-description: Flutter Particle Background
-version: 0.0.1
+description: This is a flutter particle background for all the platforms web, android and ios. This makes small particles moving in the background making the app look more pleasant.
+version: 1.0.3
 homepage: https://github.com/abdullahriaz95/Flutter-ParticleBackground
 
 environment:

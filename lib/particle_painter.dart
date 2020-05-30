@@ -1,9 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 
 import 'package:flutter_particle_background/particle_handler.dart';
-
 
 class ParticlePainter extends CustomPainter {
   ParticleHandler particleHandler;
@@ -21,7 +19,6 @@ class ParticlePainter extends CustomPainter {
         ..style = p.isFilled ? PaintingStyle.fill : PaintingStyle.stroke;
 
       if (p.isFilled) {
-
         canvas.drawCircle(pos, p.size / 1.2, paint);
       } else {
         canvas.drawCircle(pos, p.size / 1.2, paint);

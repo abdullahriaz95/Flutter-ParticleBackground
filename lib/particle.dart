@@ -21,8 +21,7 @@ class Particle {
     this.lifeLeft = 0,
     this.isFilled = false,
     this.vx = 0,
-    this.vy =0,
+    this.vy = 0,
     this.plusminus = false,
-
   });
 }

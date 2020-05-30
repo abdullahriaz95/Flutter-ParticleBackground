@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:flutter/painting.dart';
 import 'package:flutter_particle_background/palette.dart';
 
-
 class Rnd {
   static int _seed = DateTime.now().millisecondsSinceEpoch;
   static Random random = Random(_seed);
 
   static set seed(int val) => random = Random(_seed = val);
+
   static int get seed => _seed;
 
   /// Gets the next double.
@@ -63,10 +63,10 @@ class Rnd {
             .asMap()
             .map(
               (i, color) => MapEntry(
-            i,
-            [i, (luminance - color.computeLuminance()).abs()],
-          ),
-        )
+                i,
+                [i, (luminance - color.computeLuminance()).abs()],
+              ),
+            )
             .values
             .toList();
 
@@ -75,7 +75,7 @@ class Rnd {
         });
 
         List<Color> sortedColors =
-        lumDiff.map((d) => colors[d[0] + 1]).toList();
+            lumDiff.map((d) => colors[d[0] + 1]).toList();
 
         result = Palette(
           components: [colors[0]] + sortedColors,
@@ -84,6 +84,4 @@ class Rnd {
     }
     return result;
   }
-
-
 }
