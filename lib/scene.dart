@@ -46,7 +46,6 @@ class _SceneState extends State<Scene> with SingleTickerProviderStateMixin {
     );
   }
 
-
   void _tick(Duration duration) {
     setState(() {
       _particleBackgroundHandler.tick();

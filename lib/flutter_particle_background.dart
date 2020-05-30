@@ -98,7 +98,10 @@ class _MyHomePageState extends State<MyHomePage>
             widget.configuration.blur == true
                 ? Positioned.fill(
                     child: BackdropFilter(
-                      filter: ImageFilter.blur(sigmaY: widget.configuration.blurIntensity.toDouble(), sigmaX: widget.configuration.blurIntensity.toDouble()),
+                      filter: ImageFilter.blur(
+                          sigmaY: widget.configuration.blurIntensity.toDouble(),
+                          sigmaX:
+                              widget.configuration.blurIntensity.toDouble()),
                       child: Container(
                         color: Colors.black.withOpacity(0),
                       ),
