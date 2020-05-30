@@ -95,5 +95,5 @@ Simply use **ParticleBackground()** with different parameters as you like.
  10. slowestSpeed - double
 
 ## Showcase
-![Image here](https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/2020-05-30%2014.48.21.gif | width=150, height=350)
+<img src="screenshots/1.gif" height="300em" />
 
