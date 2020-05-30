@@ -20,7 +20,7 @@ To use this package, add a dependency to your `pubspec.yaml` as:
 Simply just use the `ParticleBackground()` widget. Some of the examples are given below.
 
 ### Example 1
-Simply use ParticleBackground() without any parameters for default values.
+Simply use **ParticleBackground()** without any parameters for default values.
 
     class TestScreen extends StatelessWidget {  
       @override  
@@ -30,22 +30,22 @@ Simply use ParticleBackground() without any parameters for default values.
             body: Stack(  
               children: [  
                 ParticleBackground(),  
-      Center(  
+			    Center(  
                   child: Text(  
                     'Welcome',  
-      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),  
-      ),  
-      )  
+				    style: TextStyle(fontSize: 20, 
+				    fontWeight:FontWeight.bold),  
+			      ),  
+			    )  
               ],  
-      ),  
-      ),  
-      );  
+		    ),  
+		  ),  
+	    );  
       }  
     }
-
     
 ### Example 2
-Simply use ParticleBackground() with different parameters as you like.
+Simply use **ParticleBackground()** with different parameters as you like.
 
     class TestScreen extends StatelessWidget {  
       @override  
@@ -56,38 +56,44 @@ Simply use ParticleBackground() with different parameters as you like.
               children: [  
                 ParticleBackground(
                 backgroundColor: Colors.black,  
-			    multiColor: false,  
-			    particleColor: Colors.blue,  
-			    numberOfParticles: 200,  
-			    biggestSize: 6,  
-			    smallestSize: 4,  
-			    blur: true,  
-			    allFilled: true,  
-			    highestSpeed: 1.1,  
-			    slowestSpeed: 0.2,
-			    ),  
-			    Center(  
+    		    multiColor: false,  
+    		    particleColor: Colors.blue,  
+    		    numberOfParticles: 200,  
+    		    biggestSize: 6,  
+    		    smallestSize: 4,  
+    		    blur: true,  
+    		    allFilled: true,  
+    		    highestSpeed: 1.1,  
+    		    slowestSpeed: 0.2,
+    		    ),  
+    		    Center(  
                   child: Text(  
-                    'Welcome',  
-      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),  
-				      ),  
-				     )  
-		           ],  
-			      ),  
-			    ),  
-		      );  
-			}  
-		  }
+                  'Welcome',  
+    		      style: TextStyle(fontSize: 20, 
+    		      fontWeight: FontWeight.bold),  
+    			      ),  
+    			     )  
+    	           ],  
+    		      ),  
+    		    ),  
+    	      );  
+    		}  
+    	  }
 
    
 ## Parameters
-backgroundColor - dart Color  
-			    multiColor - bool,  
-			    particleColor - dart Color
-			    numberOfParticles - int,  
-			    biggestSize - int,  
-			    smallestSize - int,  
-			    blur - bool,  
-			    allFilled - bool,  
-			    highestSpeed - double,  
-			    slowestSpeed - double,
+
+ 1. backgroundColor - dart color   
+ 2. multiColor - bool
+ 3. particleColor - dart color 
+ 4. numberOfParticles - int 
+ 5. biggestSize - int 
+ 6. smallestSize - int   
+ 7. blur - bool
+ 8. allFilled - bool
+ 9. highestSpeed - double
+ 10. slowestSpeed - double
+
+## Showcase
+![Image here](https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/2020-05-30%2014.48.21.gif | width=150, height=350)
+
