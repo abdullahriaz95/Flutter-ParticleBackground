@@ -65,6 +65,7 @@ Simply use **ParticleBackground()** with different parameters as you like.
     		    allFilled: true,  
     		    highestSpeed: 1.1,  
     		    slowestSpeed: 0.2,
+    		    blurIntensity: 8,
     		    ),  
     		    Center(  
                   child: Text(  
@@ -93,7 +94,12 @@ Simply use **ParticleBackground()** with different parameters as you like.
  8. allFilled - bool
  9. highestSpeed - double
  10. slowestSpeed - double
+ 11. blurIntensity - int
 
 ## Showcase
-<img src="screenshots/1.gif" height="300em" />
+These animations may not appear smooth in the following images, but these are smooth when implemented.
+
+<img src="screenshots/1.gif" height="300em" /> <img src="screenshots/2.gif" height="300em" /> <img src="screenshots/3.gif" height="300em" />
+<img src="screenshots/4.gif" height="300em" /> <img src="screenshots/5.gif" height="300em" /> <img src="screenshots/6.gif" height="300em" />
+<img src="screenshots/7.gif" height="300em" /> <img src="screenshots/8.gif" height="300em" />
 

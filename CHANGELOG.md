@@ -32,3 +32,8 @@
 ## [1.0.3] - TODO: Add release date.
 
 * Added blur intensity feature
+
+
+## [1.0.4] - TODO: Add release date.
+
+* improvements
