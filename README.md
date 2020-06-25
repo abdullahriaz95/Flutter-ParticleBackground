@@ -99,16 +99,5 @@ Simply use **ParticleBackground()** with different parameters as you like.
 ## Showcase
 These animations may not appear smooth in the following images, but these are smooth when implemented.
 
-![Example 1](screenshots/1.gif)
-![Example 1](screenshots/2.gif)
-![Example 1](screenshots/3.gif)
-![Example 1](screenshots/4.gif)
-![Example 1](screenshots/5.gif)
-
-<img src="https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/1.gif" height="300em" /> <img src="https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/2.gif" height="300em" /> <img src="https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/3.gif" height="300em" />
-<img src="https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/4.gif" height="300em" /> <img src="https://github.com/abdullahriaz95/Flutter-ParticleBackground/blob/master/screenshots/5.gif" height="300em" />
-
-
-
-<img src="screenshots/1.gif" height="300em" /> <img src="screenshots/2.gif" height="300em" /> <img src="screenshots/3.gif" height="300em" />
-<img src="screenshots/4.gif" height="300em" /> <img src="screenshots/5.gif" height="300em" />
+<img src="screenshots/1.gif" height="600em" /> <img src="screenshots/2.gif" height="600em" /> <img src="screenshots/3.gif" height="600em" />
+<img src="screenshots/4.gif" height="600em" /> <img src="screenshots/5.gif" height="600em" />

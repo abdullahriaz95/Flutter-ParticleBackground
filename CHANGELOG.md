@@ -43,3 +43,8 @@
 
 * bug fixes
 
+
+## [1.0.6] - 25th June, 2020.
+
+* documentation updated
+
