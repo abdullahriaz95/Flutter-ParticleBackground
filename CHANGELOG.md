@@ -39,6 +39,7 @@
 * improvements
 
 
-## [1.0.4] - TODO: Add release date.
+## [1.0.5] - TODO: Add release date.
 
 * bug fixes
+
