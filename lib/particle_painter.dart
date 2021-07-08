@@ -6,7 +6,7 @@ import 'package:flutter_particle_background/particle_handler.dart';
 class ParticlePainter extends CustomPainter {
   ParticleHandler particleHandler;
 
-  ParticlePainter({this.particleHandler}) : super(repaint: particleHandler);
+  ParticlePainter({required this.particleHandler}) : super(repaint: particleHandler);
 
   @override
   void paint(Canvas canvas, Size size) {

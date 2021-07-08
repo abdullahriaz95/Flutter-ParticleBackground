@@ -3,13 +3,15 @@ import 'dart:ui';
 /// Holds a list of colors.
 class Palette {
   /// The palette's color members. All unique.
-  List<Color> components;
+  final List<Color> components;
 
-  Palette({this.components});
+  Palette({required this.components});
 
   /// Creates a new palette from JSON.
+  ///
+  /// If parsing fails, the black color is used
   factory Palette.fromJson(List<String> json) {
-    var components = json.map((c) => Color(int.tryParse(c))).toList();
+    var components = json.map((c) => Color(int.tryParse(c) ?? 0)).toList();
     return Palette(components: components);
   }
 }

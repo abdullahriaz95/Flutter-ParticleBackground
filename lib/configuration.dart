@@ -14,15 +14,15 @@ class Configuration {
   int blurIntensity;
 
   Configuration(
-      {this.multiColor,
-      this.particleColor,
-      this.backgroundColor,
-      this.numberOfParticles,
-      this.blur,
-      this.highestSpeed,
-      this.slowestSpeed,
-      this.biggestSize,
-      this.smallestSize,
-      this.blurIntensity,
-      this.allFilled});
+      {required this.multiColor,
+      required this.particleColor,
+      required this.backgroundColor,
+      required this.numberOfParticles,
+      required this.blur,
+      required this.highestSpeed,
+      required this.slowestSpeed,
+      required this.biggestSize,
+      required this.smallestSize,
+      required this.blurIntensity,
+      required this.allFilled});
 }
