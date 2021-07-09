@@ -7,35 +7,32 @@ import 'package:flutter_particle_background/particle.dart';
 import 'rnd.dart';
 
 class ParticleHandler with ChangeNotifier {
-  int numOfParticles;
-  List<Particle> particles;
-  double width;
-  double height;
-  Configuration configuration;
+  final List<Particle> particles;
+  final Configuration configuration;
+  final Size size;
 
   ParticleHandler({
-    Size size,
-    this.configuration,
-  }) {
-    numOfParticles = configuration.numberOfParticles;
-    particles = List<Particle>(numOfParticles);
-    setSize(size);
-  }
-
-  void init() {
-    for (int i = 0; i < numOfParticles; i++) {
-      //Show random color here
-//      var color = Rnd.getItem(palette.components);
-      var color;
-      if (configuration.multiColor) {
-        color = PaletteColors.getRandomColor();
-      } else {
-        color = configuration.particleColor;
-      }
-      particles[i] = Particle(color: color);
+    required this.size,
+    required this.configuration,
+  }) : particles = List.generate(
+          configuration.numberOfParticles,
+          (_) {
+            var color;
+            if (configuration.multiColor) {
+              color = PaletteColors.getRandomColor();
+            } else {
+              color = configuration.particleColor;
+            }
+            return Particle(color: color);
+          },
+        ) {
+    for (var i = 0; i < particles.length; ++i) {
       resetParticle(i);
     }
   }
+
+  double get width => size.width;
+  double get height => size.height;
 
   Particle resetParticle(int i) {
     Particle p = particles[i];
@@ -44,12 +41,6 @@ class ParticleHandler with ChangeNotifier {
     p.x = Random().nextInt(width.toInt()).toDouble();
     p.y = Random().nextInt(height.toInt()).toDouble();
     return p;
-  }
-
-  void setSize(Size size) {
-    width = size.width;
-    height = size.height;
-    init();
   }
 
   void tick() {

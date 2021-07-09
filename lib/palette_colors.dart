@@ -548,7 +548,10 @@ class PaletteColors {
 
   static Color getRandomColor() {
     String getRandomItem = palette[Random().nextInt(palette.length)];
-    int value = int.tryParse(getRandomItem);
+    int? value = int.tryParse(getRandomItem);
+    if (value == null) {
+      throw Exception('Unable to generate random color because parsing of string $getRandomItem failed');
+    }
     return Color(value);
   }
 }

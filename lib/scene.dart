@@ -15,13 +15,12 @@ class Scene extends StatefulWidget {
 }
 
 class _SceneState extends State<Scene> with SingleTickerProviderStateMixin {
-  ParticleHandler _particleBackgroundHandler;
+  ParticleHandler? _particleBackgroundHandler;
 
   @override
   void initState() {
     createTicker(_tick)..start();
-    _particleBackgroundHandler =
-        ParticleBackgroundHandler(widget._size, widget._configuration);
+    _particleBackgroundHandler = ParticleBackgroundHandler(widget._size, widget._configuration);
     super.initState();
   }
 
@@ -35,8 +34,7 @@ class _SceneState extends State<Scene> with SingleTickerProviderStateMixin {
           child: Stack(
             children: <Widget>[
               CustomPaint(
-                painter: ParticlePainter(
-                    particleHandler: _particleBackgroundHandler),
+                painter: ParticlePainter(particleHandler: _particleBackgroundHandler!),
                 child: Container(),
               ),
             ],
@@ -48,7 +46,7 @@ class _SceneState extends State<Scene> with SingleTickerProviderStateMixin {
 
   void _tick(Duration duration) {
     setState(() {
-      _particleBackgroundHandler.tick();
+      _particleBackgroundHandler!.tick();
     });
   }
 }

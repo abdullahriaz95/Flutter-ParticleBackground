@@ -7,8 +7,7 @@ import 'package:flutter_particle_background/particle_handler.dart';
 import 'rnd.dart';
 
 class ParticleBackgroundHandler extends ParticleHandler {
-  ParticleBackgroundHandler(Size size, Configuration configuration)
-      : super(size: size, configuration: configuration);
+  ParticleBackgroundHandler(Size size, Configuration configuration) : super(size: size, configuration: configuration);
 
   @override
   void tick() {
@@ -24,7 +23,6 @@ class ParticleBackgroundHandler extends ParticleHandler {
       p.lifeLeft = p.lifeLeft - 1;
 //      p.lifeLeft = _getDistanceFromTop(p);
 
-      print(p.lifeLeft);
       // Gradually reduce the size of all particles.
       if (p.lifeLeft < 400) {
         p.size -= p.size * .0035;
@@ -45,8 +43,7 @@ class ParticleBackgroundHandler extends ParticleHandler {
       p.isFilled = Rnd.getBool();
     }
 
-    p.size = Rnd.getDouble(configuration.smallestSize.toDouble(),
-        configuration.biggestSize.toDouble());
+    p.size = Rnd.getDouble(configuration.smallestSize.toDouble(), configuration.biggestSize.toDouble());
 
     p.life = Rnd.getDouble(.5, .55);
 
@@ -56,8 +53,7 @@ class ParticleBackgroundHandler extends ParticleHandler {
 
     p.plusminus = (Rnd.getBool());
 
-    double v =
-        Rnd.getDouble(configuration.slowestSpeed, configuration.highestSpeed);
+    double v = Rnd.getDouble(configuration.slowestSpeed, configuration.highestSpeed);
     p.vx *= v;
     p.vy *= v;
   }

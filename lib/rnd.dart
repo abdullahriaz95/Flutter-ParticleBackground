@@ -49,11 +49,11 @@ class Rnd {
   }
 
   static Palette getPalette(List<Palette> palettes, bool dark) {
-    Palette result;
+    Palette? result;
 
     while (result == null) {
       Palette palette = Rnd.getItem(palettes);
-      List<Color> colors = Rnd.shuffle(palette.components);
+      List<Color> colors = List.from(Rnd.shuffle(palette.components));
 
       var luminance = colors[0].computeLuminance();
 
@@ -74,8 +74,7 @@ class Rnd {
           return a[1].compareTo(b[1]);
         });
 
-        List<Color> sortedColors =
-            lumDiff.map((d) => colors[d[0] + 1]).toList();
+        List<Color> sortedColors = lumDiff.map((d) => colors[(d[0] + 1).toInt()]).toList();
 
         result = Palette(
           components: [colors[0]] + sortedColors,

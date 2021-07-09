@@ -62,25 +62,22 @@ class MyHomePage extends StatefulWidget {
   MyHomePage(this.configuration);
 }
 
-class _MyHomePageState extends State<MyHomePage>
-    with SingleTickerProviderStateMixin {
-  Animation animation;
-  AnimationController _animationController;
+class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+  Animation? _animation;
+  AnimationController? _animationController;
 
   @override
   void initState() {
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 60));
-    animation = Tween<double>(begin: 0, end: 255)
-        .chain(CurveTween(curve: Curves.elasticOut))
-        .animate(_animationController)
+    _animationController = AnimationController(vsync: this, duration: Duration(seconds: 60));
+    _animation =
+        Tween<double>(begin: 0, end: 255).chain(CurveTween(curve: Curves.elasticOut)).animate(_animationController!)
           ..addListener(() {
-            if (animation.isCompleted) _animationController.repeat();
+            if (_animation!.isCompleted) _animationController!.repeat();
             setState(() {});
           });
 
-    _animationController.forward();
+    _animationController!.forward();
   }
 
   @override
@@ -100,8 +97,7 @@ class _MyHomePageState extends State<MyHomePage>
                     child: BackdropFilter(
                       filter: ImageFilter.blur(
                           sigmaY: widget.configuration.blurIntensity.toDouble(),
-                          sigmaX:
-                              widget.configuration.blurIntensity.toDouble()),
+                          sigmaX: widget.configuration.blurIntensity.toDouble()),
                       child: Container(
                         color: Colors.black.withOpacity(0),
                       ),
